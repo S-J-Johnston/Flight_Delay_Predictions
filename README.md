@@ -1,9 +1,33 @@
 # Flight-Delay-Project
 
+## Introduction
+The purpose of this project is to create a predictive model to estimate the expected time delay on US commercial flights. 
+The models are built using sampled data of all US air traffic from 2015-2019. 
 
-##The following document descibes the files in the currect directory.
+## Data
+Raw data was accessed from LHL private servers. Samples of the data can be found in the Data folder.
 
-## ipynb files:
+1. Flight Table:
+    The departure and arrival information about flights in US in years 2018 and 2019
+2. Passenger Table:
+    The passenger totals on different routes from years 2015-2019 aggregated per month.
+4. Weather:
+    Was accessed through the [weatherAPI](https://www.weatherapi.com/). 
+
+## Tech Stack
+SQL, Pandas, Numpy, Matplotlib, Seaborn, SKlearn, Pickle 
+
+## Process
+The predictive model was built over multiple iterations. At each iteration additional features were applied to assess if there was any improvement in model performance.
+
+![Alt text](Images/Development%20Process.png)
+
+## Results
+*To be added. Baseline model using linear regression showed the best performance. XGBosst showed suspect results which require further investigation. 
+
+## Repository Table of Contents:
+
+### ipynb files:
   - model_test.ipynb
       - Test Dataset predictions
   - Flights_EDA_&_Modelling_Pass_Flight_Feats.ipynb
@@ -17,11 +41,11 @@
   - Passenger_EDA_Feature_Eng.ipynb
       - EDA and Feature engineering for passenger table.
   
- ## model files:
+ ### model files:
   - finalized_lin_reg_model.sav
-       - Exported model from Flights_EDA_&_Modelling_Pass_Flight_Feats.ipynb. Used for the flight delay prediction for the Test dataset.
+       - Exported model from Flights_EDA_&_Modelling_Pass_Flight_Feats.ipynb. Used for the flight delay prediction for the test dataset.
  
- ## Data Files
+ ### Data Files
   - flight_delay_pred_model_submission.csv
       - The important one. Contains the model output for predictions on the test dataset.
   - route_keys.csv
